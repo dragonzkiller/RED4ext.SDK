@@ -27,14 +27,17 @@ struct SingleScreenShotData : ISerializable
     uint8_t unk30[0x34 - 0x30]; // 30
     rend::ScreenshotMode mode; // 34
     AbsolutePathSerializable outputPath; // 38
-    uint8_t unk58[0x80 - 0x58]; // 58
+    uint8_t unk58[0x78 - 0x58]; // 58
+    uint64_t unk78; // 78
     rend::dim::EPreset resolution; // 80
     rend::ResolutionMultiplier resolutionMultiplier; // 84
     bool forceLOD0; // 88
     uint8_t unk89[0x8C - 0x89]; // 89
     ESaveFormat saveFormat; // 8C
     DynArray<EEnvManagerModifier> emmModes; // 90
-    uint8_t unkA0[0xF8 - 0xA0]; // A0
+    uint8_t unkA0[0xF0 - 0xA0]; // A0
+    uint8_t unkF0[0xF4 - 0xF0]; // F0
+    uint32_t unkF4; // F4
 };
 RED4EXT_ASSERT_SIZE(SingleScreenShotData, 0xF8);
 } // namespace rend
