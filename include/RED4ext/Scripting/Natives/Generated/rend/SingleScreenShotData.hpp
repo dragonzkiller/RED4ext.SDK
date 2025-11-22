@@ -36,7 +36,11 @@ struct SingleScreenShotData : ISerializable
     ESaveFormat saveFormat; // 8C
     DynArray<EEnvManagerModifier> emmModes; // 90
     uint8_t unkA0[0xF0 - 0xA0]; // A0
-    uint8_t unkF0[0xF4 - 0xF0]; // F0
+    //uint8_t unkF0[0xF4 - 0xF0]; // F0
+    uint8_t unkF0; // F0
+    uint8_t unkF1; // F1
+    uint8_t unkF2; // F2
+    uint8_t unkF3; // F3
     uint32_t unkF4; // F4
 };
 RED4EXT_ASSERT_SIZE(SingleScreenShotData, 0xF8);
